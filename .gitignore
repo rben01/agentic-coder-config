@@ -4,6 +4,7 @@
 !settings.json
 !statusline.fish
 !statusline.sh
+!README.md
 
 !agents
 !agents/*
