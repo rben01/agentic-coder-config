@@ -3,6 +3,7 @@
 
 !settings.json
 !statusline.fish
+!statusline.sh
 
 !agents
 !agents/*
