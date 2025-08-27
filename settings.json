@@ -3,5 +3,18 @@
 		"type": "command",
 		"command": "~/.claude/statusline.sh",
 		"padding": 0
+	},
+	"hooks": {
+		"PostToolUse": [
+			{
+				"matcher": "Edit|MultiEdit|Write",
+				"hooks": [
+					{
+						"type": "command",
+						"command": "jq --raw-output '.tool_input.file_path | select(match(\"\\\\\\\\.(html|css|js|ts|jsx|tsx|svelte|json|md)$\"))' | xargs --no-run-if-empty npx prettier --write"
+					}
+				]
+			}
+		]
 	}
 }
