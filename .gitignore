@@ -1,10 +1,14 @@
 *
 !.gitignore
 
-!settings.json
-!statusline.fish
-!statusline.sh
-!README.md
+!claude
+!claude/settings.json
+!claude/statusline.fish
+!claude/statusline.sh
+!claude/README.md
 
-!agents
-!agents/*
+!claude/agents
+!claude/agents/*
+
+!codex
+!codex/config.toml
