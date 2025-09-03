@@ -1,5 +1,5 @@
 approval_policy = "on-failure"
-model_reasoning = "high"
+model_reasoning_effort = "medium"
 sandbox_mode = "workspace-write"
 
 [sandbox_workspace_write]
