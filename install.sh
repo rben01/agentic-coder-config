@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
 
-ln -s "$(pwd)"/claude ~/.claude
-ln -s "$(pwd)"/codex ~/.codex
+function link() {
+	dst="$HOME"/."$1"
+	# shellcheck disable=SC2088 # perfectly reasonable use of the tilde
+	[ ! -e "$dst" ] && ln -s "$(pwd)"/"$1" "$dst" || echo "~/.$1 already exists, skipping"
+}
+
+link claude
+link codex
