@@ -1,16 +1,1 @@
-*
-!.gitignore
-
-!claude
-!claude/settings.json
-!claude/statusline.fish
-!claude/statusline.sh
-!claude/README.md
-
-!claude/agents
-!claude/agents/*
-
-!codex
-!codex/config.toml
-
-!install.sh
+.DS_Store
