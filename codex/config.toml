@@ -4,3 +4,6 @@ sandbox_mode = "workspace-write"
 
 [sandbox_workspace_write]
 	network_access = true
+
+[tools]
+	web_search = true
