@@ -6,6 +6,9 @@ tui = { theme = { name = "dark-charcoal-rainbow" } }
 [sandbox_workspace_write]
 	network_access = true
 
+[tools]
+	web_search = true
+
 [mcp_servers.serena]
 	command = "uvx"
 	args = [
