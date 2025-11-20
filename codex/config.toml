@@ -1,21 +1,13 @@
 approval_policy = "on-failure"
-model = "gpt-5-codex"
+model = "gpt-5.1-codex-max"
 sandbox_mode = "workspace-write"
-tui = { theme = { name = "dark-charcoal-rainbow" } }
 
 [sandbox_workspace_write]
 	network_access = true
 
-[tools]
-	web_search = true
+[features]
+	web_search_request = true
 
-[mcp_servers.serena]
-	command = "uvx"
-	args = [
-		"--from",
-		"git+https://github.com/oraios/serena",
-		"serena",
-		"start-mcp-server",
-		"--context",
-		"codex",
-	]
+
+[notice]
+	"hide_gpt-5.1-codex-max_migration_prompt" = true
