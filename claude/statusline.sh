@@ -2,7 +2,7 @@
 
 input=$(cat)
 
-# MODEL_DISPLAY=$(echo "$input" | jq -r '.model.display_name')
+MODEL_DISPLAY=$(echo "$input" | jq -r '.model.display_name')
 CURRENT_DIR=$(echo "$input" | jq -r '.workspace.current_dir')
 CLAUDE_VERSION=$(echo "$input" | jq -r '.version')
 LINES_ADDED=$(echo "$input" | jq -r '.cost.total_lines_added')
@@ -36,6 +36,6 @@ if git rev-parse --git-dir >/dev/null 2>&1; then
     fi
 fi
 
-output+="${DIVIDER}${FG_YELLOW}v${CLAUDE_VERSION}"
-output+="${FG_NORMAL} (${FG_GREEN}+${LINES_ADDED}${FG_NORMAL}|${FG_RED}-${LINES_REMOVED}${FG_NORMAL})"
+output+="${DIVIDER}${FG_YELLOW}${MODEL_DISPLAY}"
+output+="${FG_NORMAL} (${FG_GREEN}+${LINES_ADDED}${FG_NORMAL}|${FG_RED}-${LINES_REMOVED}${FG_NORMAL})${DIVIDER}${FG_YELLOW}v${CLAUDE_VERSION}${FG_NORMAL}"
 echo "$output"
