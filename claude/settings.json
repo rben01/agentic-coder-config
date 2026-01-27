@@ -1,4 +1,11 @@
 {
+  "permissions": {
+    "allow": [
+      "mcp__serena"
+    ],
+    "defaultMode": "default"
+  },
+  "model": "opus",
   "hooks": {
     "PostToolUse": [
       {
@@ -16,10 +23,5 @@
     "type": "command",
     "command": "~/.claude/statusline.sh",
     "padding": 0
-  },
-  "permissions": {
-    "allow": [
-      "mcp__serena"
-    ]
   }
 }
