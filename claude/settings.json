@@ -23,5 +23,8 @@
     "type": "command",
     "command": "~/.claude/statusline.sh",
     "padding": 0
-  }
+  },
+  "enabledPlugins": {
+		"rust-analyzer-lsp@claude-plugins-official": true
+	}
 }
