@@ -20,6 +20,7 @@ FG_YELLOW=$(printf "\e[0;33m")
 FG_BLUE=$(printf "\e[0;34m")
 FG_MAGENTA=$(printf "\e[0;35m")
 FG_CYAN=$(printf "\e[0;36m")
+FG_WHITE=$(printf "\e[0;97m")
 
 DIVIDER="${FG_NORMAL} | "
 
@@ -59,7 +60,7 @@ if [ "$CONTEXT_PCT" -gt 75 ]; then
 elif [ "$CONTEXT_PCT" -gt 50 ]; then
     CTX_COLOR="$FG_YELLOW"
 else
-    CTX_COLOR="$FG_NORMAL"
+    CTX_COLOR="$FG_WHITE"
 fi
 
 output+=" ${FG_NORMAL}[${CTX_COLOR}${CTX_DISPLAY}${FG_NORMAL}=${CTX_COLOR}${CONTEXT_PCT}%${FG_NORMAL}]"
