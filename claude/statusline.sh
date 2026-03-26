@@ -28,12 +28,12 @@ output=''
 
 output+="${FG_BLUE}$(basename "$CURRENT_DIR")"
 
-if git rev-parse --git-dir >/dev/null 2>&1; then
-    BRANCH=$(git branch --show-current 2>/dev/null)
+if git --no-optional-locks rev-parse --git-dir >/dev/null 2>&1; then
+    BRANCH=$(git --no-optional-locks branch --show-current 2>/dev/null)
     if [ -n "$BRANCH" ]; then
         output+="${DIVIDER}"
         # color clean and dirty git repo differently
-        if [ -z "$(git status --porcelain)" ]; then
+        if [ -z "$(git --no-optional-locks status --porcelain)" ]; then
             color="$FG_CYAN"
         else
             color="$FG_MAGENTA"
