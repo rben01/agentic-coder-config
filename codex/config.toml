@@ -1,16 +1,26 @@
-approval_policy = "on-failure"
-model = "gpt-5.2-codex"
+approval_policy = "on-request"
+model = "gpt-5.5"
 sandbox_mode = "workspace-write"
+personality = "pragmatic"
+model_reasoning_effort = "high"
 
 [sandbox_workspace_write]
 	network_access = true
-
-[features]
-	web_search_request = true
 
 
 [notice]
 	"hide_gpt-5.1-codex-max_migration_prompt" = true
 
-[notice.model_migrations]
-"gpt-5.1-codex-max" = "gpt-5.2-codex"
+	[notice.model_migrations]
+		"gpt-5.1-codex-max" = "gpt-5.2-codex"
+		"gpt-5.2-codex" = "gpt-5.4"
+		"gpt-5.3-codex" = "gpt-5.4"
+
+[projects."/Users/robert/Offline-Documents/Collagen"]
+	trust_level = "trusted"
+
+[projects."/Users/robert"]
+	trust_level = "trusted"
+
+[tui.model_availability_nux]
+"gpt-5.5" = 2
